@@ -1,5 +1,29 @@
 const ErrorHandler = require("../utils/errorHandler");
 
+/*
+errorHandler(err, req, res, next)
+NAME
+    errorHandler - Custom error handling middleware.
+SYNOPSIS
+    errorHandler = (err, req, res, next);
+    err -> The error object containing information about the error.
+    req -> Request object.
+    res -> Response object for sending error responses.
+    next -> The next middleware function in the pipeline.
+DESCRIPTION
+    This custom error handling middleware is used to handle various types of errors and send appropriate error responses. It sets the status code and error message based on the type of error encountered. The handled error types include MongoDB ID casting error, MongoDB duplicate key error, JSON Web Token (JWT) validation error, and JWT token expiration error. It then sends a JSON response with the error status code and message to the client.
+RETURNS
+    No direct return value. Sends an error response to the client.
+*/
+
+/*
+errorHandler(err, req, res, next)
+- Custom error handling middleware to handle and send error responses.
+- Handles various types of errors, including MongoDB ID casting error, MongoDB duplicate key error, JSON Web Token (JWT) validation error, and JWT token expiration error.
+- Sends a JSON response with the appropriate error status code and message to the client.
+*/
+
+
 module.exports = (err, req, res, next) => {
     err.statusCode = err.statusCode || 500;
     err.message = err.message || "Internal Server Error";
@@ -36,6 +60,7 @@ module.exports = (err, req, res, next) => {
         error:err.message,
     })
 }
+/* errorHandler = (err, req, res, next); */
 
 /*
     the job of the error middleware is to customize some error properties and
