@@ -3,6 +3,17 @@ import React, { useEffect, useState } from 'react'
 import {Button} from "react-native-paper"
 import { useDispatch, useSelector } from 'react-redux'
 import { sendResetEmail } from '../redux/actions'
+/*=============================================================
+EmailReset
+DESCRIPTION
+    This component provides the functionality to send a password reset email.
+    Users can input their email and send a reset OTP (One-Time Password).
+    Upon success, it navigates to the "resetPw" screen with the email.
+PARAMETERS
+    navigation -> React Navigation prop for navigating between screens.
+RETURNS
+    A React Native component for sending password reset emails.
+=============================================================*/
 
 const EmailReset = ({navigation}) => {
     const {success} = useSelector((state)=>state.pw)

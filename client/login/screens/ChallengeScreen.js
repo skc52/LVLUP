@@ -5,7 +5,39 @@ import { getChallengeById , upvoteChallenge, quitChallenge,getMyStreaksForAChall
 import { useDispatch, useSelector } from 'react-redux';
 import { useFocusEffect } from '@react-navigation/native';
 import Loader from '../components/Loader';
+/**
+ * ChallengeScreen
+ * Description:
+ *   This component displays details of a challenge, including its title, description,
+ *   user's streak progress, checked-in messages, and various actions like joining,
+ *   quitting, upvoting, and completing the challenge.
+ * 
+ * Props:
+ *   navigation - React Navigation prop for navigating between screens.
+ *   route - React Navigation route prop for receiving parameters.
+ * 
+ * State:
+ *   challenge - The selected challenge from Redux store.
+ *   streak - The user's streak information for the challenge.
+ *   messages - List of checked-in messages for the challenge.
+ *   id - The challenge ID.
+ *   user - The current user's information.
+ *   isJoined - Flag indicating if the user has joined the challenge.
+ *   isUpvoted - Flag indicating if the user has upvoted the challenge.
+ *   quited - Flag indicating if the user has quit the challenge.
+ *   completed - Flag indicating if the user has completed the challenge.
+ * 
+ * Dispatched Actions:
+ *   - getChallengeById: Retrieves challenge details.
+ *   - upvoteChallenge: Upvotes the challenge.
+ *   - quitChallenge: Quits the challenge.
+ *   - getMyStreaksForAChallenge: Retrieves the user's streak information.
+ *   - joinChallenge: Joins the challenge.
+ *   - getAllCheckedInMessages: Retrieves all checked-in messages for the challenge.
+ *   - completeChallenge: Completes the challenge if the user's streak matches the duration.
+ * 
 
+ */
 const ChallengeScreen = ({navigation, route}) => {
     const {challenge, error, loading} = useSelector((state)=>state.challenge)
     const {streak, error:strkError, loading:strkLoading} = useSelector((state)=>state.streak)

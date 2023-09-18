@@ -2,6 +2,17 @@ import React, { useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { useSelector } from 'react-redux';
 
+/*=============================================================
+Message
+DESCRIPTION
+    This component represents a message in a chat.
+    It displays the sender's name and message text.
+PARAMETERS
+    message -> Message data to display.
+RETURNS
+    A React Native component for displaying a chat message.
+=============================================================*/
+
 const Message = ({ message }) => {
   const {user } = useSelector((state)=>state.auth)
   useEffect(()=>{

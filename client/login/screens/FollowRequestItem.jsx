@@ -6,6 +6,18 @@ import { useDispatch , useSelector} from 'react-redux'
 import { Button } from 'react-native-paper'
 import { useNavigation } from '@react-navigation/native';
 import { getAUser, acceptFollowRequest, clearAcceptSuccess, getAllFollowRequests  } from '../redux/actions'
+/*=============================================================
+FollowRequestItem
+DESCRIPTION
+    This component represents an item in the follow request list.
+    It displays user information and provides an option to accept a follow request.
+PARAMETERS
+    user -> User data for the follow request.
+RETURNS
+    A React Native component for displaying a follow request item.
+=============================================================*/
+
+
 const FollowRequestItem = ({user}) => {
   const {acceptReqSuccess} = useSelector((state)=>state.follow)
     const navigation = useNavigation();

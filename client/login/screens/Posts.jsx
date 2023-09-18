@@ -9,7 +9,16 @@ import { getChallengeById } from '../redux/challengeActions';
 import { getAUser } from '../redux/actions'
 import { upvotePost } from '../redux/postActions';
 import { addNewComment } from '../redux/commentActions';
-
+/*=============================================================
+Post
+DESCRIPTION
+    This component represents an individual post.
+    It displays post details, user interactions, and comments.
+PARAMETERS
+    post -> Post data to display.
+RETURNS
+    A React Native component for displaying an individual post.
+=============================================================*/
 const Post = ({ post }) => {
   const [liked, setLiked] = useState(false);
   const [comment, setComment] = useState('');

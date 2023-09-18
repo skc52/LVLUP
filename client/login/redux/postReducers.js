@@ -46,7 +46,16 @@ const initialState = {
     error: null,
     isCreated:false
   };
-  
+  /*=============================================================
+postReducer
+DESCRIPTION
+    Handles state related to posts, including creation, updates, and listings.
+PARAMETERS
+    - state: The current state of the reducer.
+    - action: The action dispatched to the reducer.
+RETURNS
+    The updated state with loading, posts, error, or isCreated information.
+=============================================================*/
   export const postReducer = (state = initialState, action) => {
     switch (action.type) {
         case POST_GET_ALL_REQUEST:

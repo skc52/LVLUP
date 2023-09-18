@@ -3,7 +3,17 @@ import React, { useEffect, useState } from 'react'
 import {Button} from "react-native-paper"
 import { useDispatch, useSelector } from 'react-redux'
 import { changePw } from '../redux/actions'
-
+/*=============================================================
+ChangePw
+DESCRIPTION
+    This component provides a user interface for changing passwords.
+    Users can input their old password, new password, and confirm the new password.
+    It also includes a button to trigger the password change action.
+PARAMETERS
+    None
+RETURNS
+    A React Native component for changing passwords.
+=============================================================*/
 const ChangePw = () => {
 
     const dispatch = useDispatch();

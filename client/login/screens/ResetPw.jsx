@@ -3,6 +3,16 @@ import React, { useEffect, useState } from 'react'
 import {Button} from "react-native-paper"
 import { useDispatch, useSelector } from 'react-redux'
 import { resetPw } from '../redux/actions'
+/*=============================================================
+ResetPw
+DESCRIPTION
+    This component allows users to reset their password using OTP and a new password.
+PARAMETERS
+    navigation -> React Navigation navigation object.
+    route -> React Navigation route object.
+RETURNS
+    A React Native component for resetting user passwords.
+=============================================================*/
 
 const ResetPw = ({navigation, route}) => {
     const {isUpdated} = useSelector((state)=>state.pw)

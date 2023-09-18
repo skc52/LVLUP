@@ -1,8 +1,17 @@
 import { View, Text, SafeAreaView, Platform, StatusBar , StyleSheet} from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
+/*=============================================================
+Home
+DESCRIPTION
+    This component represents the home screen of the application.
+    It may display posts and challenges from all users.
+PARAMETERS
+    None.
+RETURNS
+    A React Native component for the home screen.
+=============================================================*/
 
-// this is where all the posts and challenges will be shown from all users
 const Home = () => {
     const navigation = useNavigation();
   return (

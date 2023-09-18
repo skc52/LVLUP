@@ -3,6 +3,15 @@ import React, { useEffect, useState } from 'react'
 import {Button} from "react-native-paper"
 import { useDispatch, useSelector } from 'react-redux'
 import {  sendActivateOtp} from '../redux/actions'
+/*=============================================================
+SendActivate
+DESCRIPTION
+    This component allows users to send an activation OTP.
+PARAMETERS
+    navigation -> React Navigation navigation object.
+RETURNS
+    A React Native component for sending activation OTP.
+=============================================================*/
 
 const SendActivate = ({navigation}) => {
     const {user} = useSelector((state)=>state.auth);

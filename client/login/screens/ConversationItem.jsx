@@ -5,6 +5,18 @@ import Dummy from "../images/dummyprofile.png"
 import { useDispatch } from 'react-redux'
 import { useNavigation } from '@react-navigation/native';
 import { fetchConversation } from '../redux/messageActions'
+/*=============================================================
+ConversationItem
+DESCRIPTION
+    This component represents a single item in the conversation list.
+    It displays the user's profile image, name, and last message.
+    Clicking on it navigates to the corresponding conversation.
+PARAMETERS
+    user -> The user object representing the conversation item.
+RETURNS
+    A React Native component for a single conversation list item.
+=============================================================*/
+
 const ConversationItem = ({user}) => {
     const navigation = useNavigation();
     const dispatch = useDispatch();

@@ -7,6 +7,17 @@ import { sendFollowRequest , unFollow, clearAcceptSuccess, clearSendSuccess, cle
 import {COLORS, FONT, SIZES, SHADOWS} from './Colors'
 import { showAllPostsOfAUser } from '../redux/postActions'
 import Settings from './Settings'
+/*=============================================================
+Profile
+DESCRIPTION
+    This component displays user profile information and handles follow/unfollow actions.
+PARAMETERS
+    navigation -> React Navigation navigation object.
+    route -> React Navigation route object.
+RETURNS
+    A React Native component for displaying user profiles.
+=============================================================*/
+
 const Profile = ({ navigation, route }) => {
     const { user } = useSelector((state) => state.auth);
     const { user2, sendReqSuccess, unfollowSuccess, acceptReqSuccess } = useSelector(

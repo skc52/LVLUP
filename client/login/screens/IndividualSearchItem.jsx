@@ -5,6 +5,17 @@ import Dummy from "../images/dummyprofile.png"
 import { useDispatch } from 'react-redux'
 import { useNavigation } from '@react-navigation/native';
 import { getAUser } from '../redux/actions'
+/*=============================================================
+IndividualSearchItem
+DESCRIPTION
+    This component represents an individual search result item.
+    It displays user information and allows navigation to the user's profile.
+PARAMETERS
+    user -> User data for the search result.
+RETURNS
+    A React Native component for displaying a search result item.
+=============================================================*/
+
 const IndividualSearchItem = ({user}) => {
     const navigation = useNavigation();
     const dispatch = useDispatch();

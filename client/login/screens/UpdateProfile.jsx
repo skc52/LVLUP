@@ -6,6 +6,16 @@ import { updateUser, clearUpdate, loadUser } from '../redux/actions'
 import { useDispatch, useSelector } from 'react-redux'
 import * as FileSystem from 'expo-file-system';
 import Loader from '../components/Loader'
+/*=============================================================
+UpdateProfile
+DESCRIPTION
+    This component allows users to update their profile information, including name and avatar.
+PARAMETERS
+    navigation -> React Navigation navigation object.
+    route -> React Navigation route object.
+RETURNS
+    A React Native component for updating user profile.
+=============================================================*/
 
 const UpdateProfile = ({navigation, route}) => {
     const {isAuthenticated, loading, user, isUpdated} = useSelector((state)=>state.auth);

@@ -110,6 +110,16 @@ const Login = ({navigation}) => {
 
 export default Login
 
+/*=============================================================
+Login
+DESCRIPTION
+    This component represents the login screen of the application.
+    It allows users to log in using their email and password.
+PARAMETERS
+    navigation -> React Navigation prop for navigating between screens.
+RETURNS
+    A React Native component for the login screen.
+=============================================================*/
 
 const Styles = StyleSheet.create({
    

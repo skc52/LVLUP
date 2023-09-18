@@ -5,6 +5,15 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getAllFollowRequests } from '../redux/actions'
 import {COLORS, FONT, SIZES, SHADOWS} from './Colors'
 import FollowRequestItem from './FollowRequestItem.jsx';
+/*=============================================================
+FollowRequests
+DESCRIPTION
+    This component displays a list of follow requests.
+PARAMETERS
+    navigation -> React Navigation prop for navigating between screens.
+RETURNS
+    A React Native component for displaying a list of follow requests.
+=============================================================*/
 
 const FollowRequests = ({navigation}) => {
     const {user} = useSelector((state)=>state.auth)

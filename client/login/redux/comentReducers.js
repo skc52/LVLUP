@@ -15,7 +15,16 @@ const initialState = {
     loading: false,
     error: null,
   };
-  
+  /*=============================================================
+comment Reducer
+DESCRIPTION
+    Handles state related to creating and listing comments.
+PARAMETERS
+    - state: The current state of the reducer.
+    - action: The action dispatched to the reducer.
+RETURNS
+    The updated state with loading, streak, or error information.
+=============================================================*/
   export const commentReducer = (state = initialState, action) => {
     switch (action.type) {
         case COMMENT_CREATE_REQUEST:

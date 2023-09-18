@@ -16,7 +16,16 @@ import {
     loading: false,
     error: null
   };
-  
+  /*=============================================================
+messageReducer
+DESCRIPTION
+    Handles state related to fetching and sending messages in a conversation.
+PARAMETERS
+    - state: The current state of the reducer.
+    - action: The action dispatched to the reducer.
+RETURNS
+    The updated state with conversation, loading, or error information.
+=============================================================*/
   export const messageReducer = (state = initialState, action) => {
     switch (action.type) {
       case FETCH_CONVERSATION_REQUEST:
@@ -70,7 +79,16 @@ import {
     isLoading: false,
     error: null
   };
-  
+  /*=============================================================
+conversationListReducer
+DESCRIPTION
+    Handles state related to listing conversations.
+PARAMETERS
+    - state: The current state of the reducer.
+    - action: The action dispatched to the reducer.
+RETURNS
+    The updated state with conversationList, isLoading, or error information.
+=============================================================*/
   export const conversationListReducer = (state = initialState2, action) => {
     switch (action.type) {
       case FETCH_CONVERSATION_LIST_REQUEST:

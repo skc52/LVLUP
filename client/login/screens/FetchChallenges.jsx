@@ -4,6 +4,18 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchAllChallengesIHaveInteractedWith, getChallengeById, getAllCheckedInMessages } from '../redux/challengeActions';
 import { useFocusEffect } from '@react-navigation/native';
 import Loader from '../components/Loader';
+/*=============================================================
+ChallengesScreen
+DESCRIPTION
+    This component displays a list of challenges based on user interaction.
+    Users can filter challenges by their status (created, joined, quit, completed).
+PARAMETERS
+    navigation -> React Navigation prop for navigating between screens.
+    route -> React Navigation route prop for accessing route parameters.
+RETURNS
+    A React Native component for displaying and filtering challenges.
+=============================================================*/
+
 const ChallengesScreen = ({ navigation, route }) => {
   const [filter, setFilter] = useState(''); // default filter is created
   const [challenges, setChallenges] = useState([]);

@@ -5,7 +5,17 @@ import { getChallengeById , upvoteChallenge, quitChallenge,getMyStreaksForAChall
 import { useDispatch, useSelector } from 'react-redux';
 import { useFocusEffect } from '@react-navigation/native';
 import Loader from '../components/Loader';
-
+/*=============================================================
+ChallengeScreen
+DESCRIPTION
+    This component represents the Challenge screen.
+    It displays challenge details, user interactions, and messages.
+PARAMETERS
+    navigation -> React Navigation navigation object.
+    route -> React Navigation route object.
+RETURNS
+    A React Native component for displaying challenge details and interactions.
+=============================================================*/
 const ChallengeScreen = ({navigation, route}) => {
   const {challenge} = route.params;
     const {streak, error:strkError, loading:strkLoading} = useSelector((state)=>state.streak)

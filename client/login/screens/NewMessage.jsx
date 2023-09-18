@@ -13,7 +13,15 @@ const peopleData = [
   { id: '5', name: 'Tom Baker', age: '45', occupation: 'Marketing Director' },
 ];
 
-
+/*=============================================================
+NewMessage
+DESCRIPTION
+    This component allows users to search for and initiate new messages.
+PARAMETERS
+    navigation -> React Navigation navigation object.
+RETURNS
+    A React Native component for searching and initiating new messages.
+=============================================================*/
 
 const NewMessage = ({navigation}) => {
   const [searchTerm, setSearchTerm] = useState('');

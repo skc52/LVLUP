@@ -2,6 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, FlatList, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import {} from "../redux/messageActions"
+/*=============================================================
+MutualFollowersScreen
+DESCRIPTION
+    This component allows users to search for mutual followers and start conversations.
+RETURNS
+    A React Native component for searching and initiating conversations with mutual followers.
+=============================================================*/
 
 const MutualFollowersScreen = () => {
   const [searchQuery, setSearchQuery] = useState('');

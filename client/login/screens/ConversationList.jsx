@@ -10,6 +10,17 @@ import {COLORS, FONT, SIZES, SHADOWS} from './Colors'
 import { useFocusEffect } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/AntDesign'
 
+/*=============================================================
+ConversationListScreen
+DESCRIPTION
+    This component displays a list of conversations.
+    It allows users to search for conversations and start new ones.
+    Clicking on a conversation navigates to the corresponding chat screen.
+PARAMETERS
+    navigation -> React Navigation prop for navigating between screens.
+RETURNS
+    A React Native component for displaying the conversation list.
+=============================================================*/
 
 const ConversationListScreen = ({ navigation }) => {
   const dispatch = useDispatch();

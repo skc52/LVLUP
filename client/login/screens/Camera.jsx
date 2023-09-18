@@ -4,7 +4,18 @@ import { useState } from 'react';
 import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import * as ImagePicker from "expo-image-picker"
-
+/*=============================================================
+CameraComponent
+DESCRIPTION
+    This component provides camera functionality for taking pictures or selecting images from the device's gallery.
+    It allows users to switch between the front and back camera.
+    The captured or selected image is then passed to the appropriate screen for further processing.
+PARAMETERS
+    navigation -> React Navigation prop for navigating between screens.
+    route -> React Navigation route prop for accessing route parameters.
+RETURNS
+    A React Native component for the camera functionality.
+=============================================================*/
 const CameraComponent = ({navigation, route}) => {
     const [type, setType] = useState(CameraType.back);
     const [permission, requestPermission] = Camera.useCameraPermissions();

@@ -38,7 +38,16 @@ const initialState = {
     error: null,
     loading: false,
   };
-  
+  /*=============================================================
+Create Challenge Reducer
+DESCRIPTION
+    Handles state related to creating a new challenge.
+PARAMETERS
+    - state: The current state of the reducer.
+    - action: The action dispatched to the reducer.
+RETURNS
+    The updated state with loading, challenge, or error information.
+=============================================================*/
   export const createChallengeReducer = (state = initialState, action) => {
     switch (action.type) {
       case CREATE_CHALLENGE_REQUEST:
@@ -54,6 +63,16 @@ const initialState = {
   
   
 
+/*=============================================================
+Challenge List Reducer
+DESCRIPTION
+    Handles state related to fetching and displaying a list of challenges.
+PARAMETERS
+    - state: The current state of the reducer.
+    - action: The action dispatched to the reducer.
+RETURNS
+    The updated state with loading, challenges, success, or error information.
+=============================================================*/
   export const challengeListReducer = (state = { challenges: [] }, action) => {
     switch (action.type) {
       case CHALLENGE_LIST_REQUEST:
@@ -72,6 +91,16 @@ const initialState = {
     error: null,
     loading: false,
   };
+  /*=============================================================
+Challenge Reducer
+DESCRIPTION
+    Handles state related to individual challenges (e.g., getting, upvoting, quitting, joining, check-in, etc.).
+PARAMETERS
+    - state: The current state of the reducer.
+    - action: The action dispatched to the reducer.
+RETURNS
+    The updated state with loading, challenge, message, or error information.
+=============================================================*/
 export const challengeReducer = (state = initialState2, action) => {
   switch (action.type) {
     case GET_CHALLENGE_REQUEST:
@@ -89,12 +118,7 @@ export const challengeReducer = (state = initialState2, action) => {
 
               case COMPLETE_CHALLENGE_SUCCESS:
       return {  challenge: action.payload.challenge, loading: false, message:action.payload.message?action.payload.message:"" };
-      // case UPVOTE_CHALLENGE_SUCCESS:
-      //   return {
-      //     challenge: { ...state.challenge, upvotes:action.payload.challenge.upvotes },
-      //     loading: false,
-      //     message: action.payload.message ? action.payload.message : '',
-      //   };
+      
       case GET_CHALLENGE_FAILURE:
       case UPVOTE_CHALLENGE_FAIL:
         case QUIT_CHALLENGE_FAIL:
@@ -109,21 +133,17 @@ export const challengeReducer = (state = initialState2, action) => {
   }
 };
 
-// export const upvoteChallengeReducer = (state = { challenge: {} }, action) => {
-//   switch (action.type) {
-//     case UPVOTE_CHALLENGE_REQUEST:
-//       return { loading: true };
-//     case UPVOTE_CHALLENGE_SUCCESS:
-//       return { loading: false, success: true, challenge: action.payload.challenge };
-//     case UPVOTE_CHALLENGE_FAIL:
-//       return { loading: false, error: action.payload };
-//     default:
-//       return state;
-//   }
-// };
 
-
-
+/*=============================================================
+Checked-In Messages Reducer
+DESCRIPTION
+    Handles state related to fetching and displaying checked-in messages in challenges.
+PARAMETERS
+    - state: The current state of the reducer.
+    - action: The action dispatched to the reducer.
+RETURNS
+    The updated state with loading, messages, or error information.
+=============================================================*/
 
 export const checkedInMessagesReducer = (state = { messages: [] }, action) => {
   switch (action.type) {
@@ -156,7 +176,16 @@ const initialState3 = {
   error: null,
   loading: false,
 };
-
+/*=============================================================
+Streak Reducer
+DESCRIPTION
+    Handles state related to checking and updating challenge streaks.
+PARAMETERS
+    - state: The current state of the reducer.
+    - action: The action dispatched to the reducer.
+RETURNS
+    The updated state with loading, streak, or error information.
+=============================================================*/
 export const streakReducer = (state = initialState3 , action) => {
   switch (action.type) {
       case CHECK_STREAK_REQUEST:
@@ -195,7 +224,16 @@ const initialState4 = {
   loading:false,
   error:null
 };
-
+/*=============================================================
+Challenges Reducer
+DESCRIPTION
+    Handles state related to fetching and storing a list of challenges.
+PARAMETERS
+    - state: The current state of the reducer.
+    - action: The action dispatched to the reducer.
+RETURNS
+    The updated state with challenges, loading, or error information.
+=============================================================*/
 export const challengesReducer = (state = initialState4, action) => {
   switch (action.type) {
     case FETCH_CHALLENGES_REQUEST:

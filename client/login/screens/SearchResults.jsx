@@ -5,6 +5,15 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getAUser } from '../redux/actions'
 import {COLORS, FONT, SIZES, SHADOWS} from './Colors'
 import IndividualSearchItem from './IndividualSearchItem.jsx';
+/*=============================================================
+SearchResults
+DESCRIPTION
+    This component displays search results for users.
+PARAMETERS
+    navigation -> React Navigation navigation object.
+RETURNS
+    A React Native component for displaying search results.
+=============================================================*/
 
 const SearchResults = ({navigation}) => {
     const {users} = useSelector((state)=>state.users)

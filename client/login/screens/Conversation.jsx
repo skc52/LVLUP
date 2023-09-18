@@ -3,6 +3,17 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity, FlatList } from 'r
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchConversation, sendMessage } from '../redux/messageActions.js';
 import Message from './Message.jsx';
+/*=============================================================
+Conversation
+DESCRIPTION
+    This component represents a chat conversation screen.
+    It displays a list of messages in a conversation, allows the user to send new messages, and fetches messages.
+PARAMETERS
+    route -> React Navigation route prop for accessing route parameters.
+    navigation -> React Navigation prop for navigating between screens.
+RETURNS
+    A React Native component for a chat conversation screen.
+=============================================================*/
 
 const Conversation = ({ route, navigation }) => {
   const dispatch = useDispatch();

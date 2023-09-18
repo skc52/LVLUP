@@ -5,6 +5,17 @@ import {useNavigation} from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAUser, loadUser} from '../redux/actions'
 import { showAllPosts } from '../redux/postActions'
+
+/*=============================================================
+Footer Component
+DESCRIPTION
+    The footer component for navigation.
+PARAMETERS
+    None.
+RETURNS
+    A React Native component for the application footer.
+=============================================================*/
+
 const Footer = () => {
     const navigation = useNavigation();
     const {user} = useSelector((state)=>state.auth);

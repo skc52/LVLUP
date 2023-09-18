@@ -6,7 +6,17 @@ import { listChallenges, listChallengesCreatedByMe, listFollowedChallenges, getC
 import { Chip } from 'react-native-paper';
 import Loader from '../components/Loader';
 import { CheckBox } from 'react-native-elements';
-
+/*=============================================================
+ChallengeListScreen
+DESCRIPTION
+    This component displays a list of challenges based on various filters like challenges created by the user, challenges followed by the user, and a keyword search.
+    Users can filter challenges using checkboxes, add tags for more specific filtering, and search for challenges.
+    It also provides the ability to clear added tags.
+PARAMETERS
+    navigation -> React Navigation prop for navigating between screens.
+RETURNS
+    A React Native component for displaying a list of challenges with filtering and search options.
+=============================================================*/
 const ChallengeListScreen = ({ navigation }) => {
   const [createdByMe, setCreatedByMe] = useState(false);
   const [followedByMe, setFollowedByMe] = useState(false);

@@ -1,7 +1,6 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
-const bodyParser = require("body-parser");
-const dotenv = require("dotenv");
+
 const cors = require("cors");
 const errorMiddleWare = require("./middleware/error.js")
 const Journal = require("./models/journalModel");
@@ -9,7 +8,7 @@ const fileUpload = require("express-fileupload")
 
 const app = express();
 
-// WHY COOKIES?? TODO
+
 app.use(cookieParser());
 app.use(express.json({limit:"50mb"}));
 app.use(

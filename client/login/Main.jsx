@@ -34,6 +34,15 @@ import App from './screens/Posts';
 import SharePost from './screens/SharePost';
 const Stack = createNativeStackNavigator();
 
+/*=============================================================
+Main
+DESCRIPTION
+    The main navigation component of the application.
+PARAMETERS
+    None.
+RETURNS
+    A React Native navigation component.
+=============================================================*/
 
 const Main = () => {
 

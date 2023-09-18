@@ -3,6 +3,15 @@ import React, { useEffect, useState } from 'react'
 import {Button} from "react-native-paper"
 import { useDispatch, useSelector } from 'react-redux'
 import { logout } from '../redux/actions'
+/*=============================================================
+Settings
+DESCRIPTION
+    This component provides options like changing password, logging out, updating profile, and deleting an account.
+PARAMETERS
+    navigation -> React Navigation navigation object.
+RETURNS
+    A React Native component for managing user settings.
+=============================================================*/
 
 
 const Settings = ({navigation}) => {

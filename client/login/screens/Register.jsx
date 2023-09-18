@@ -5,6 +5,16 @@ import {Button} from 'react-native-paper'
 import { registerUser } from '../redux/actions'
 import { useDispatch, useSelector } from 'react-redux'
 import * as FileSystem from 'expo-file-system';
+/*=============================================================
+Register
+DESCRIPTION
+    This component handles user registration, including name, email, password, and avatar.
+PARAMETERS
+    navigation -> React Navigation navigation object.
+    route -> React Navigation route object.
+RETURNS
+    A React Native component for user registration.
+=============================================================*/
 
 const Register = ({navigation, route}) => {
     const {isAuthenticated} = useSelector((state)=>state.auth);

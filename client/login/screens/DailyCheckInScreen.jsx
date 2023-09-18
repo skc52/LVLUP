@@ -2,6 +2,17 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity } from 'react-native';
 import { dailyCheckInOnAChallenge , getChallengeById, getAllCheckedInMessages, clearMsg} from '../redux/challengeActions';
 import { useDispatch, useSelector } from 'react-redux';
+/*=============================================================
+DailyCheckInScreen
+DESCRIPTION
+    This component allows users to perform a daily check-in for a specific challenge.
+    Users can input their check-in message and submit it.
+PARAMETERS
+    route -> React Navigation route prop for accessing route parameters.
+    navigation -> React Navigation prop for navigating between screens.
+RETURNS
+    A React Native component for performing daily check-ins.
+=============================================================*/
 
 const DailyCheckInScreen = ({ route, navigation }) => {
     const { challengeId } = route.params;

@@ -5,6 +5,17 @@ import { Chip } from 'react-native-paper';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { createPost, updateAPost } from '../redux/postActions';
+/*=============================================================
+SharePost
+DESCRIPTION
+    This component allows users to create or edit a post and associate it with a challenge.
+PARAMETERS
+    navigation -> React Navigation navigation object.
+    route -> React Navigation route object.
+RETURNS
+    A React Native component for creating or editing a post.
+=============================================================*/
+
 const SharePost = ({navigation, route}) => {
     const {post} = route.params;
 

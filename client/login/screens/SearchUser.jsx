@@ -5,6 +5,15 @@ import Icon from 'react-native-vector-icons/AntDesign'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { getAllUsersSearch } from '../redux/actions'
+/*=============================================================
+SearchUser
+DESCRIPTION
+    This component allows users to search for other users.
+PARAMETERS
+    navigation -> React Navigation navigation object.
+RETURNS
+    A React Native component for searching users.
+=============================================================*/
 
 const SearchUser = ({ navigation }) => {
   const { user } = useSelector((state) => state.auth);

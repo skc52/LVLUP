@@ -5,6 +5,18 @@ import { Chip } from 'react-native-paper';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { createPost } from '../redux/postActions';
+/*=============================================================
+CreateChallengeScreen
+DESCRIPTION
+    This component provides a form for creating a new challenge.
+    Users can input the title, challenge description, duration, and tags.
+    It allows adding and clearing tags and handles challenge creation.
+PARAMETERS
+    navigation -> React Navigation prop for navigating between screens.
+RETURNS
+    A React Native component for creating a new challenge.
+=============================================================*/
+
 const CreateChallengeScreen = ({navigation}) => {
   const [title, setTitle] = useState('');
   const [challenge, setChallenge] = useState('');
